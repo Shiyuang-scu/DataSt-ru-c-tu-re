@@ -1,5 +1,6 @@
 import collections
 import os
+import six
 
 #清屏
 def cls():
@@ -107,8 +108,7 @@ def outputWordStatics(string):
 #编码
 def encode(filename, string):
     a = TransEncode(string)
-    fw = open(filename,'w')
-    fw.write(a)
+    fw = open(filename,'wb')
     fw.close()
 
 #解码
@@ -116,6 +116,10 @@ def decode(filename):
     fr = open(filename)
     transdecode = fr.read()
     aa = TransDecode(transdecode)
+    f = open('/Users/seunoboru/Desktop/Learning/Algorithm/数据结构课程/project/数据结构Project2/实验要求与测试数据/f3_reconstruct.txt','w')
+    f.write(aa)
+    f.close()
+    fr.close()
     print(aa)
 
 #计算压缩率
@@ -144,7 +148,7 @@ if __name__ == '__main__':
     t = nodeQeuen(freChar(string))
     tree = creatHuffmanTree(t)
     HuffmanCodeDic(tree, '')
-    filename_transcode = '/Users/seunoboru/Desktop/Learning/Algorithm/数据结构课程/project/数据结构Project2/实验要求与测试数据/f3_code.huf'
+    filename_transcode = '/Users/seunoboru/Desktop/Learning/Algorithm/数据结构课程/project/数据结构Project2/实验要求与测试数据/f3_code.qlh'
     
     flag = 0
     while(flag!='4'):
@@ -181,11 +185,3 @@ if __name__ == '__main__':
             cls()
             print('See You!')
             break
-        
-        
-
-    
-
-
-
-
