@@ -205,4 +205,3 @@ if __name__ == '__main__':
     mainInterface(filename)
     while input('Continue ? (Y/N)').lower() == 'y':
         mainInterface(filename)
-    print('test!')
